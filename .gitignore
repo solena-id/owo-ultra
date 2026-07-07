@@ -1,0 +1,6 @@
+owo-sleep-state.json
+*.log
+captcha_debug.log
+accounts/*.env
+accounts/*.txt
+!accounts/README.txt
