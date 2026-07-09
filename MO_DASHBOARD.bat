@@ -2,7 +2,13 @@
 chcp 65001 >nul
 title OwO Farmer - Dashboard Viewer
 
-set URL=http://127.0.0.1:3000
+set PORT=3000
+if exist .env (
+    for /f "tokens=1,2 delims==" %%a in (.env) do (
+        if "%%a"=="DASHBOARD_PORT" set PORT=%%b
+    )
+)
+set URL=http://127.0.0.1:%PORT%
 set PROFILE="%TEMP%\OwODashProfile"
 
 :: 1. Uu tien tim Microsoft Edge (Nhe, tich hop san tren Windows 10/11)
