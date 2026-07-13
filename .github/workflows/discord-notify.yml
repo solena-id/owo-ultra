@@ -1,0 +1,25 @@
+name: Gửi thông báo Update lên Discord
+on: 
+  push:
+    branches:
+      - main # Chỉ báo cáo khi push lên nhánh main
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Gửi Webhook tới Discord
+        uses: tsickert/discord-webhook@v5.3.0
+        with:
+          webhook-url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          embed-title: "🚀 BẢN CẬP NHẬT MỚI ĐÃ LÊN SÓNG!"
+          embed-description: |
+            **Chi tiết thay đổi:**
+            ${{ github.event.head_commit.message }}
+            
+            [Xem chi tiết bản vá trên Github](${{ github.event.head_commit.url }})
+          embed-color: 5814783
+          embed-image-url: "${{ secrets.DISCORD_GIF_URL }}"
+          embed-author-name: "${{ github.actor }}"
+          embed-author-url: "https://github.com/${{ github.actor }}"
+          embed-author-icon-url: "https://github.com/${{ github.actor }}.png"
