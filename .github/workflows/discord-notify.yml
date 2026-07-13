@@ -27,23 +27,23 @@ jobs:
               username: 'OwO Farmer System',
               avatar_url: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png',
               embeds: [{
-                title: '🚀 BẢN CẬP NHẬT MỚI ĐÃ LÊN SÓNG!',
+                title: '🚀 NEW UPDATE DEPLOYED!',
                 url: process.env.COMMIT_URL,
                 color: 5814783,
-                description: 'Một bản vá lỗi / tính năng mới vừa được cập nhật lên hệ thống. Chi tiết thay đổi được liệt kê bên dưới.',
+                description: 'A new bugfix or feature has just been released. Check out the changelog below.',
                 fields: [
                   {
-                    name: '📜 Chi tiết thay đổi',
+                    name: '📜 Changelog',
                     value: '\`\`\`md\\n' + process.env.COMMIT_MSG + '\\n\`\`\`',
                     inline: false
                   },
                   {
-                    name: '👤 Người cập nhật',
+                    name: '👤 Author',
                     value: process.env.ACTOR,
                     inline: true
                   },
                   {
-                    name: '🔗 Mã bản vá',
+                    name: '🔗 Commit Hash',
                     value: '[' + process.env.COMMIT_ID.substring(0,7) + '](' + process.env.COMMIT_URL + ')',
                     inline: true
                   }
