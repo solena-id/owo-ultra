@@ -5,7 +5,9 @@ title OwO Farmer - Dashboard Viewer
 set PORT=3000
 if exist .env (
     for /f "tokens=1,2 delims==" %%a in (.env) do (
-        if "%%a"=="DASHBOARD_PORT" set PORT=%%b
+        if "%%a"=="DASHBOARD_PORT" (
+            for /f "tokens=1 delims= #" %%c in ("%%b") do set PORT=%%c
+        )
     )
 )
 set URL=http://127.0.0.1:%PORT%
