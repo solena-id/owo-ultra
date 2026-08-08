@@ -8,8 +8,7 @@ echo ==============================================
 echo.
 echo Dang kiem tra va tai ban cap nhat moi nhat tu Github...
 echo.
-if exist "app.dat" del "app.dat"
-if exist "app.dat.enc" del "app.dat.enc"
+powershell -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/solena-id/owo-ultra/main/app.dat' -OutFile 'app.dat'"
 powershell -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/solena-id/owo-ultra/main/core.exe' -OutFile 'core.exe'"
 powershell -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/solena-id/owo-ultra/main/START.bat' -OutFile 'START.bat'"
 powershell -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/solena-id/owo-ultra/main/QUAN_LY_TOKEN.bat' -OutFile 'QUAN_LY_TOKEN.bat'"
