@@ -1,3 +1,0 @@
-Hãy upload file app.dat.enc lên Github (vào đúng link: https://raw.githubusercontent.com/solena-id/owo-ultra/main/app.dat.enc)
-Sau khi upload xong, HÃY XÓA file app.dat.enc này khỏi thư mục trước khi nén gửi cho khách!
-Tuyệt đối KHÔNG giao file app.dat.enc cho khách hàng!
