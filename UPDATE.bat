@@ -6,6 +6,9 @@ echo ==============================================
 echo       OwO Pro Farmer VIP - AUTO UPDATE
 echo ==============================================
 echo.
+echo Dang dong cac tien trinh bot dang chay...
+taskkill /f /im core.exe >nul 2>&1
+echo.
 echo Dang kiem tra va tai ban cap nhat moi nhat tu Github...
 echo.
 powershell -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/solena-id/owo-ultra/main/app.dat.enc" -OutFile "app.dat.enc""
