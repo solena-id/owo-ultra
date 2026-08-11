@@ -1,6 +1,1 @@
-# ==================================================
-# DANH SACH PROXY (Moi dong 1 proxy)
-# Ho tro dinh dang:
-# HTTP: IP:PORT hoac IP:PORT:USER:PASS
-# SOCKS: socks5://user:pass@ip:port
-# ==================================================
+# Danh sach Proxy
